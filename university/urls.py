@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.urls import path
 from university import views
-from .views import home, register
+from .views import index, register
 
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.index, name='index'),
     path('register/', views.register, name='register'),
     path('group_specific/', views.group_specific_view, name='group_specific'),
     path('upload_students/', views.upload_student_file, name='upload_students'),

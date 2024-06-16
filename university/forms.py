@@ -40,37 +40,3 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'first_name', 'last_name', 'password1', 'password2']
 
-
-
-
-"""
-views.py
-def add_student(request):
-    if request.method == 'POST':
-        form = StudentForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')  # Redirect to home page or any other page
-    else:
-        form = StudentForm()
-    return JsonResponse(request, 'add_student.html', {'form': form})
-
-forms.py
-class StudentForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = ['name', 'roll_number', 'enrolled_class']
-models.py
-class Student(models.Model):
-    name = models.CharField(max_length=100)
-    roll_number = models.CharField(max_length=20, null=True)
-    enrolled_class = models.ForeignKey(Class, on_delete=models.CASCADE, null=True)
-
-    def __str__(self):
-        return self.name
-this are my codes change into following conditions
-1) I want to add the students roll number and the enrolled class in the list or select the in the any other page or in excel
-2) and also I want to add the year like 1st year, 2rd year, 3rd year , 4th year like wise  they want to select for each of the students this also select form the list 
-
-"""
-

@@ -28,8 +28,8 @@ from django.contrib.auth.models import User, Group
 from .forms import UserRegisterForm
 #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
 @login_required
-def home(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.html')
 
 @user_passes_test(lambda u: u.is_superuser or  Group.objects.get_or_create(name='YourGroupName')[0] in u.groups.all())
 def group_specific_view(request):
@@ -47,7 +47,7 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('index')
     else:
         form = UserRegisterForm()
     return render(request, 'signup.html', {'form': form})
