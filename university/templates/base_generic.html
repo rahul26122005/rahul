@@ -1,33 +1,10 @@
-<!-- base_generic.html -->
-
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-      body {
-          background-color: #f8f9fa;
-      }
-      .navbar {
-          margin-bottom: 20px;
-      }
-      .container {
-          max-width: 800px;
-          margin: auto;
-          background: auto;
-          padding: 20px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      }
-      .footer {
-          margin-top: 20px;
-          text-align: center;
-          color: #6c757d;
-      }
-  </style>
-  <title>{% block title %}Home{% endblock %}</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <div>
@@ -46,5 +23,6 @@
     {% block content %}
     {% endblock %}
   </div>
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

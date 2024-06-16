@@ -1,29 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Student Details</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #0000FF;
-        }
-        .navbar {
-            margin-bottom: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #FF00FF;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #6c757d;
-        }
-    </style>
+    <title>Upload Student Deatils</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,5 +39,6 @@
             </ul>
         {% endif %}
     </div>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
