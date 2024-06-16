@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "clg_projects/wsgi.py",
+      "src": "rahul/wsgi.py",
       "use": "@vercel/python"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "clg_projects/wsgi.py"
+      "dest": "rahul/wsgi.py"
     }
   ]
 }
