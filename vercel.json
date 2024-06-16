@@ -1,22 +1,22 @@
 {
-
-    "builds": [
-      {
-        "src": "clg_projects/wsgi.py",
-        "use": "@vercel/python",
-        "config" : { "maxLambdaSize": "15mb", "runtime": "python3.7"}
+  "version": 2,
+  "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
       }
-
-    ],
-    "routes": [
-      {
-        "src": "/",
-        "dest": "/"
-      },
-      {
-        "src": "/attendance",
-        "dest": "/"
-      }
-    ]
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "manage.py"
+    }
+  ]
+}

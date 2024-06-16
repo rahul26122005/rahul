@@ -32,7 +32,7 @@ if ENVIRONMENT == 'development':
     DEBUG = True
 else:
     DEBUG = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost:8000','.vercel.app','https://rahul-nu.vercel.app/']
 
 
 # Application definition
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'clg_projects.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
