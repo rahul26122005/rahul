@@ -2,24 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
-      "use": "@vercel/python",
+      "src": "clg_projects/wsgi.py",
+      "use": "@ardnt/vercel-python-wsgi",
       "config": {
-        "runtime": "python3.10"
-      }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles"
+        "maxLambdaSize": "15mb"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "clg_projects/wsgi.py"
     }
   ]
 }
